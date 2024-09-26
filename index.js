@@ -18,7 +18,9 @@ const tarBuffer = new Uint8Array(readFileSync(tarFilePath));
 parseTar(tarBuffer)
 	.then((files) => {
 		files.forEach((file) => {
-			console.log(`File: ${file.name}, Size: ${file.size} bytes`);
+			console.log(
+				`File: ${file.name}, Size: ${file.size} bytes, mode: ${file.attrs.mode}`,
+			);
 		});
 	})
 	.catch(console.error);
