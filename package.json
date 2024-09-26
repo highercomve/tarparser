@@ -1,0 +1,7 @@
+{
+	"name": "tarparser",
+	"module": "lib/index.js",
+	"type": "module",
+	"devDependencies": {},
+	"peerDependencies": {}
+}
