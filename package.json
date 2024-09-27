@@ -8,5 +8,5 @@
 	"description": "TAR parser written in pure javascript",
 	"devDependencies": {},
 	"peerDependencies": {},
-	"version": "0.0.1"
+	"version": "0.0.2"
 }
