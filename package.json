@@ -1,7 +1,11 @@
 {
 	"name": "tarparser",
 	"module": "lib/index.js",
+	"main": "lib/index.js",
 	"type": "module",
+	"author": "highercomve",
+	"license": "MIT",
+	"description": "TAR parser written in pure javascript",
 	"devDependencies": {},
 	"peerDependencies": {},
 	"version": "0.0.1"
