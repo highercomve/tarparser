@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 900">
+  <style>
+    text { font-family: Arial, sans-serif; font-size: 14px; }
+    .title { font-size: 20px; font-weight: bold; }
+    .subtitle { font-size: 16px; font-style: italic; }
+    .label { font-size: 12px; }
+    .small-label { font-size: 10px; }
+  </style>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#f0f0f0"/>
+
+  <!-- Title and Subtitle -->
+  <text x="400" y="30" text-anchor="middle" class="title">TAR File Structure</text>
+  <text x="400" y="50" text-anchor="middle" class="subtitle">Block-based format (512 bytes per block)</text>
+
+  <!-- File 1 -->
+  <g transform="translate(50, 80)">
+    <text x="350" y="0" text-anchor="middle" class="label">File 1</text>
+    <rect width="700" y="10" height="60" fill="#4e79a7"/>
+    <rect x="0" y="10" width="100" height="60" fill="#f28e2b"/>
+    <text x="50" y="45" text-anchor="middle" fill="white">Header</text>
+    <text x="350" y="45" text-anchor="middle" fill="white">File Content (padded to multiple of 512 bytes)</text>
+  </g>
+
+  <!-- File 2 -->
+  <g transform="translate(50, 180)">
+    <text x="250" y="0" text-anchor="middle" class="label">File 2</text>
+    <rect width="500" y="10" height="60" fill="#4e79a7"/>
+    <rect x="0" y="10" width="100" height="60" fill="#f28e2b"/>
+    <text x="50" y="45" text-anchor="middle" fill="white">Header</text>
+    <text x="300" y="45" text-anchor="middle" fill="white">File Content (padded)</text>
+  </g>
+
+  <!-- End of Archive -->
+  <g transform="translate(50, 280)">
+    <rect width="200" height="60" fill="#e15759"/>
+    <text x="100" y="35" text-anchor="middle" fill="white">End of Archive Marker</text>
+    <text x="100" y="80" text-anchor="middle" class="label">Two 512-byte null blocks</text>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(650, 280)">
+    <rect x="0" y="0" width="20" height="20" fill="#f28e2b"/>
+    <text x="25" y="15" class="label">Header (512 bytes)</text>
+    <rect x="0" y="25" width="20" height="20" fill="#4e79a7"/>
+    <text x="25" y="40" class="label">File Content</text>
+    <rect x="0" y="50" width="20" height="20" fill="#e15759"/>
+    <text x="25" y="65" class="label">End of Archive</text>
+  </g>
+
+  <!-- Header Zoom -->
+  <g transform="translate(50, 400)">
+    <text x="350" y="20" text-anchor="middle" class="subtitle">Header Structure (512 bytes)</text>
+
+    <g transform="translate(0, 40)">
+      <!-- File Name -->
+      <rect x="0" y="0" width="500" height="30" fill="#ffa500" stroke="#333"/>
+      <text x="510" y="20" class="label">File Name (100 bytes)</text>
+
+      <!-- File Mode -->
+      <rect x="0" y="32" width="150" height="20" fill="#ffb52e" stroke="#333"/>
+      <text x="160" y="46" class="label">Mode (8 bytes)</text>
+
+      <!-- UID -->
+      <rect x="0" y="54" width="150" height="20" fill="#ffc55c" stroke="#333"/>
+      <text x="160" y="68" class="label">UID (8 bytes)</text>
+
+      <!-- GID -->
+      <rect x="0" y="76" width="150" height="20" fill="#ffd58a" stroke="#333"/>
+      <text x="160" y="90" class="label">GID (8 bytes)</text>
+
+      <!-- File Size -->
+      <rect x="0" y="98" width="225" height="20" fill="#ffe4b8" stroke="#333"/>
+      <text x="235" y="112" class="label">File Size (12 bytes)</text>
+
+      <!-- mtime -->
+      <rect x="0" y="120" width="225" height="20" fill="#fff3e6" stroke="#333"/>
+      <text x="235" y="134" class="label">mtime (12 bytes)</text>
+
+      <!-- Checksum -->
+      <rect x="0" y="142" width="150" height="20" fill="#d4a017" stroke="#333"/>
+      <text x="160" y="156" class="label">Checksum (8 bytes)</text>
+
+      <!-- Type Flag -->
+      <rect x="0" y="164" width="20" height="20" fill="#eac117" stroke="#333"/>
+      <text x="30" y="178" class="label">Type Flag (1 byte)</text>
+
+      <!-- Link Name -->
+      <rect x="0" y="186" width="500" height="30" fill="#ffd801" stroke="#333"/>
+      <text x="510" y="206" class="label">Link Name (100 bytes)</text>
+
+      <!-- UStar Indicator and Version -->
+      <rect x="0" y="218" width="113" height="20" fill="#ffff00" stroke="#333"/>
+      <text x="123" y="232" class="label">UStar Indicator (6 bytes)</text>
+
+      <!-- Owner Name -->
+      <rect x="0" y="240" width="300" height="20" fill="#ffef00" stroke="#333"/>
+      <text x="310" y="254" class="label">Owner Name (32 bytes)</text>
+
+      <!-- Group Name -->
+      <rect x="0" y="262" width="300" height="20" fill="#ffdf00" stroke="#333"/>
+      <text x="310" y="276" class="label">Group Name (32 bytes)</text>
+
+      <!-- Device Major Number -->
+      <rect x="0" y="284" width="150" height="20" fill="#f0e68c" stroke="#333"/>
+      <text x="160" y="298" class="label">Device Major Number (8 bytes)</text>
+
+      <!-- Device Minor Number -->
+      <rect x="0" y="306" width="150" height="20" fill="#eee8aa" stroke="#333"/>
+      <text x="160" y="320" class="label">Device Minor Number (8 bytes)</text>
+
+      <!-- Prefix -->
+      <rect x="0" y="328" width="600" height="30" fill="#f0e68c" stroke="#333"/>
+      <text x="610" y="348" class="label">Prefix (155 bytes)</text>
+
+      <!-- Padding -->
+      <rect x="0" y="360" width="225" height="20" fill="#eee8aa" stroke="#333"/>
+      <text x="235" y="374" class="label">Padding (12 bytes)</text>
+    </g>
+  </g>
+</svg>
