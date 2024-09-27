@@ -3,5 +3,6 @@
 	"module": "lib/index.js",
 	"type": "module",
 	"devDependencies": {},
-	"peerDependencies": {}
+	"peerDependencies": {},
+	"version": "0.0.1"
 }
