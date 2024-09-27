@@ -127,9 +127,6 @@
 	<rect x="200" y="260" width="20" height="20" fill="lightsteelblue" stroke="black" />
 	<text x="230" y="275" font-family="Arial" font-size="12" fill="black">Type Flag (1 byte)</text>
 
-	<rect x="200" y="290" width="20" height="20" fill="lightgray" stroke="black" />
-	<text x="230" y="305" font-family="Arial" font-size="12" fill="black">Padding (Rest of 512 bytes)</text>
-
 	<rect x="420" y="200" width="20" height="20" fill="lightcyan" stroke="black" />
 	<text x="450" y="215" font-family="Arial" font-size="12" fill="black">Link Name (100 bytes)</text>
 
@@ -150,5 +147,8 @@
 
 	<rect x="620" y="260" width="20" height="20" fill="lightskyblue" stroke="black" />
 	<text x="650" y="275" font-family="Arial" font-size="12" fill="black">Prefix (155 bytes)</text>
+
+	<rect x="620" y="290" width="20" height="20" fill="white" stroke="black" />
+	<text x="650" y="305" font-family="Arial" font-size="12" fill="black">Padding (Rest of 512 bytes)</text>
   </g>
 </svg>
