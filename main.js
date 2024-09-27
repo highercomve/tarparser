@@ -1,11 +1,11 @@
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from "fs";
-import { dirname } from "path";
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
+import { dirname } from "node:path";
 import { parseTar } from "./lib/index.js";
 
 // Get the tar file path from command line arguments
 const args = process.argv;
 if (args.length < 3) {
-	console.error("Usage: node index.js <path_to_tar_file>");
+	console.error("Usage: deno index.js <path_to_tar_file>");
 	process.exit(1);
 }
 
