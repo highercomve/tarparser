@@ -1,5 +1,5 @@
-import { readFileSync } from "node:fs";
-import { basename } from "node:path";
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
+import { dirname } from "node:path";
 import { parseTar } from "./lib/index.js";
 
 // Get the tar file path from command line arguments
@@ -18,9 +18,13 @@ const tarBuffer = new Uint8Array(readFileSync(tarFilePath));
 parseTar(tarBuffer)
 	.then((files) => {
 		files.forEach((file) => {
-			console.log(
-				`File: ${file.name}, Size: ${file.size} bytes, mode: ${file.attrs.mode}`,
-			);
+			if (file.type == "file" && file.data) {
+				const path = "./" + dirname(file.name);
+				if (!existsSync(path)) {
+					mkdirSync(path, { recursive: true });
+				}
+				writeFileSync(`./${file.name}`, file.data);
+			}
 		});
 	})
 	.catch(console.error);
