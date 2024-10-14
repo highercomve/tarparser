@@ -5,7 +5,9 @@ import { parseTar } from "./lib/index.js";
 // Get the tar file path from command line arguments
 const args = process.argv;
 if (args.length < 3) {
-	console.error("Usage: deno index.js <path_to_tar_file>");
+	console.error(
+		"Usage: tarparser <path_to_tar_file> <path_for_decompresion>",
+	);
 	process.exit(1);
 }
 
