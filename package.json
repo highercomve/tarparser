@@ -6,7 +6,17 @@
 	"author": "highercomve",
 	"license": "MIT",
 	"description": "TAR parser written in pure javascript",
-	"devDependencies": {},
-	"peerDependencies": {},
+	"devDependencies": {
+		"typescript": "^5.6.3"
+	},
+	"scripts": {
+		"prepublishOnly": "tsc --lib esnext,dom --emitDeclarationOnly --declaration --declarationMap --allowJs --checkJs --outDir types lib/index.js"
+	},
+	"exports": {
+		".": {
+			"types": "./types/index.d.ts",
+			"default": "./lib/index.js"
+		}
+	},
 	"version": "0.0.2"
 }
