@@ -19,6 +19,7 @@ You can install the library using npm or include it via a `<script>` tag.
 npm install tarparser
 ```
 
+### Downloading and importing it inside your project
 ```html
 <script src="tarparser.js"></script>
 ```
