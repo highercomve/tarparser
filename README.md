@@ -1,6 +1,6 @@
 # TAR Archive Parser
 
-[![NPM](https://nodei.co/npm/tarparser.png)](https://nodei.co/npm/tarparser/)
+[![NPM](https://nodei.co/npm/tarparser.png)](https://nodei.co/npm/tarparser/) ![NPM Last Update](https://img.shields.io/npm/last-update/tarparser)
 
 A JavaScript library to parse `.tar` and `.tar.gz` (gzip-compressed tarballs) files. It supports extracting file metadata and content directly in the browser or Node.js environments.
 
