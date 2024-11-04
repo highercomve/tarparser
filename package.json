@@ -19,8 +19,6 @@
     }
   },
   "files": [
-    "deno.json",
-    "index.js",
     "lib",
     "types"
   ],
