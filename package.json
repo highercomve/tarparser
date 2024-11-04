@@ -18,5 +18,11 @@
       "default": "./lib/index.js"
     }
   },
+  "files": [
+    "deno.json",
+    "index.js",
+    "lib",
+    "types"
+  ],
   "version": "0.0.3"
 }
