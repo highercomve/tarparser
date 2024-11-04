@@ -18,5 +18,9 @@
       "default": "./lib/index.js"
     }
   },
-  "version": "0.0.3"
+  "files": [
+    "lib",
+    "types"
+  ],
+  "version": "0.0.4"
 }
