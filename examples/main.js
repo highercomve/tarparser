@@ -1,10 +1,10 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
 import { dirname } from "node:path";
-import { parseTar } from "./lib/index.js";
+import { parseTar } from "../lib/index.js";
 
 // Get the tar file path from command line arguments
 const args = process.argv;
-if (args.length < 3) {
+if (args.length < 4) {
 	console.error(
 		"Usage: tarparser <path_to_tar_file> <path_for_decompresion>",
 	);
@@ -12,6 +12,7 @@ if (args.length < 3) {
 }
 
 const tarFilePath = args[2];
+const outputPath = args[3];
 
 // Read the tar file as a buffer
 const tarBuffer = new Uint8Array(readFileSync(tarFilePath));
@@ -21,11 +22,11 @@ parseTar(tarBuffer)
 	.then((files) => {
 		files.forEach((file) => {
 			if (file.type == "file" && file.data) {
-				const path = "./" + dirname(file.name);
+				const path = outputPath + dirname(file.name);
 				if (!existsSync(path)) {
 					mkdirSync(path, { recursive: true });
 				}
-				writeFileSync(`./${file.name}`, file.data);
+				writeFileSync(`${outputPath}/${file.name}`, file.data);
 			}
 		});
 	})
