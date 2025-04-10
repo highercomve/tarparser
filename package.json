@@ -22,5 +22,6 @@
     "lib",
     "types"
   ],
+  "types": "./types/index.d.ts",
   "version": "0.0.4"
 }
